@@ -1,68 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Advanced CSS - Assignment 1</title>
-    <style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Galerija</title>
 
-    a[href^="https://www.google.com/"] { 
-        color: green
-    }
+<style>
 
-    a[href^="https://www.link-group.eu/"] { 
-        color: red
-    }
+body {
+font-family: sans-serif;
+
+}
+
+header {
+grid-area: header;
+
+padding: 20px
+}
 
 
-
-    #second-div p:nth-of-type(odd) {
-        
-        color: red
-    }    
-    #second-div p:nth-of-type(even) {
-        
-        color: blue
-    }        
-
-    #first-div>p::after {
-        content: "-NEW";
-        color: yellow;
-    }
-
-       
-    body>p:last-of-type:hover {
-        
-        font-style: italic;
-        
-    }
-    
+#grid1 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(144px, 1fr));;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 16px;
 
     
-    </style>
+    padding: 8px;
+
+}
+ 
+.Box {
+    background-color: blue;
+   position: relative;
+   border-radius: 10%;
+   border: 1px solid black;
+   background-image: url("placeholder-image.png");
+   box-sizing: border-box;
+    background-size: cover;
+    height: 90px;
+    width: 90px;
+    justify-items: flex-start;
+    background-position: center;
+
+}
+.opis {
+    background-color: white;
+    align-self: flex-end;
+    position: relative;
+    
+}
+
+@media screen and (max-width: 1024px) {
+    #grid1 {
+grid-template-columns: repeat(5, 1fr);
+}
+}
+
+@media screen and (max-width: 768px) {
+    #grid1 {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 414px) {
+    #grid1 {
+grid-template-columns: repeat(1, 1fr);
+}
+}
+
+
+</style>
 </head>
-
 <body>
-    <h1>Main Heading</h1>
-    <p>Paragraph 1</p>
-    <a href="https://www.google.com/">Google</a>
-    <a href="https://www.google.com/doodles">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
-    <div id="first-div">
-        <h2>Subheading</h2>
-        <p>Paragraph 2</p>
-        <p>Paragraph 3</p>
-        <div id="second-div">
-            <h3>Sub subheading</h3>
-            <p>Paragraph 4</p>
-            <p>Paragraph 5</p>
-            <p>Paragraph 6</p>
-            <p>Paragraph 7</p>
-            <p>Paragraph 8</p>
-        </div>
+    <header>Gallery Heading</header>
+    <div id="grid1" class="grid">
+        <div id="Box1" class="Box">
+           <div class="opis">Image Title</div>
+         </div>
+        <div id="Box2" class="Box">
+           <div class="opis">Image Title</div> 
+         </div>
+        <div id="Box3" class="Box">
+           <div class="opis">Image Title</div> 
+         </div>
+         <div id="Box4" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box5" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box6" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box7" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box8" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box9" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+          <div id="Box10" class="Box">
+            <div class="opis">Image Title</div> 
+          </div>
+        
     </div>
-    <p>Paragraph 9</p>
-    <p>Paragraph 10</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet..</p>
 </body>
-
 </html>
